@@ -1,5 +1,5 @@
 from django.db import models
-
+from projects.models import Project
 
 class FinishedProducts(models.Model):
     name = models.CharField(max_length=255)
