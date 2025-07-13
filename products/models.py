@@ -66,7 +66,7 @@ class Services(models.Model):
 
 
 class FinishedProductToProject(models.Model):
-    project = models.ForeignKey('Project', on_delete=models.CASCADE)
+    project = models.ForeignKey('projects.Project', on_delete=models.CASCADE)
     finished_product = models.ForeignKey('FinishedProducts', on_delete=models.CASCADE)
 
     def __str__(self):
@@ -78,7 +78,7 @@ class FinishedProductToProject(models.Model):
 
 
 class ServiceToProject(models.Model):
-    project = models.ForeignKey('Project', on_delete=models.CASCADE)
+    project = models.ForeignKey('projects.Project', on_delete=models.CASCADE)
     service = models.ForeignKey('Services', on_delete=models.CASCADE)
 
     def __str__(self):
@@ -90,7 +90,7 @@ class ServiceToProject(models.Model):
 
 
 class EquipmentToProject(models.Model):
-    project = models.ForeignKey('Project', on_delete=models.CASCADE)
+    project = models.ForeignKey('projects.Project', on_delete=models.CASCADE)
     equipment = models.ForeignKey('Equipment', on_delete=models.CASCADE)
 
     def __str__(self):
